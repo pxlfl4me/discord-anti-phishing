@@ -20,7 +20,7 @@ exports.antiPhishing = async function(message, embed){
     if(presente.length == 1){
         message.delete()
         
-        embed.addField('User:', '`' + message.author.username + ' | ' + message.author.id + '`')
+        embed.addField('User:', '`' + message.author.tag + ' | ' + message.author.id + '`')
         embed.addField('Link:', '`' + presente[0] + '`')
         embed.setThumbnail(message.author.displayAvatarURL())
 
