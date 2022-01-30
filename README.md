@@ -12,7 +12,7 @@ npm install discord.js@latest
 
 ## Usage:
 
-```sh-session
+```js
 const Discord = require('discord.js')
 const { antiPhishing } = require('discord-anti-phishing')
 
