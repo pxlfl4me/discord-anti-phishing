@@ -1,0 +1,25 @@
+{
+  "name": "discord-anti-phishing",
+  "version": "1.0.0",
+  "description": "Discord Anti Phishing Package",
+  "main": "index.js",
+  "engines": {
+    "node": ">= 17.x"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pxlfl4me/discord-anti-phishing.git"
+  },
+  "author": "pxl_fl4me <giupiter1410@gmail.com> (https://www.npmjs.com/~pxl_fl4me)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pxlfl4me/discord-anti-phishing/issues"
+  },
+  "homepage": "https://github.com/pxlfl4me/discord-anti-phishing#readme",
+  "dependencies": {
+    "discord.js": "^13.6.0"
+  }
+}
