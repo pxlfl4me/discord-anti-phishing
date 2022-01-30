@@ -4,7 +4,7 @@ const client = new Discord.Client({
     intents: [Discord.Intents.FLAGS.GUILDS, Discord.Intents.FLAGS.GUILD_MESSAGES],
 })
 
-client.login('OTA5MTM4NDg1NjkxMTU4NTQ4.YY_7MQ.B8LA9ZhPuVy-uIE5QzC5o4v_i6M')
+client.login('TOKEN')
 
 client.on('ready', () => {
     console.log('Ready')
