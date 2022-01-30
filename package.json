@@ -1,6 +1,6 @@
 {
   "name": "discord-anti-phishing",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Discord Anti Phishing Package",
   "main": "index.js",
   "engines": {
