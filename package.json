@@ -1,11 +1,17 @@
 {
   "name": "discord-anti-phishing",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Discord Anti Phishing Package",
   "main": "function.js",
   "engines": {
     "node": ">= 17.x"
   },
+  "keywords": [
+    "Phishing",
+    "Anti-Discord-Nitro-Spam",
+    "discord.js",
+    "Auto-Moderator"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
