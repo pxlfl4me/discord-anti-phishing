@@ -3,6 +3,7 @@
 ## Installation:
 
 **Node.js 17.0.0 or newer is required.**
+
 **discord.js 13.0.0 or newer is required.**
 
 ```sh-session
