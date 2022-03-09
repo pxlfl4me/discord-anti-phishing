@@ -31,7 +31,6 @@ exports.antiPhishing = async function(message, embed){
         });
     } else {
         const promise1 = new Promise((resolve, reject) => {
-            let res = { message: message, link: presente[0] }
             resolve(undefined);
         });
     }
