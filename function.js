@@ -25,8 +25,9 @@ exports.antiPhishing = async function(message, embed){
 
         message.channel.send({embeds: [embed]});
 
-        let res = { message: message, link: presente[0] }
-        
-        return res;
+        const promise1 = new Promise((resolve, reject) => {
+            let res = { message: message, link: presente[0] }
+            resolve(res);
+        });
     }
 }
