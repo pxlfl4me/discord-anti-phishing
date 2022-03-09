@@ -20,10 +20,13 @@ exports.antiPhishing = async function(message, embed){
     if(presente.length == 1){
         message.delete();
         
-        embed.addField('Link:', '`' + presente[0] + '`');
+        embed.addField('Link:', '||' + presente[0] + '||');
         embed.setThumbnail(message.author.displayAvatarURL());
 
         message.channel.send({embeds: [embed]});
-        return message;
+
+        let res = { message: message, link: presente[0] }
+        
+        return res;
     }
 }
