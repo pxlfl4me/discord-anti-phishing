@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 const urlJson = require('./json/url.json') 
 
-exports.antiPhishing = async function(message, embed){
+exports.antiPhishing = async function(message){
     if(!message) return console.error('Specify a first parameter (Discord.Message)')
     if(!message.author && !message.content && !message.member) return console.error('Specify a valid (Discord.Message)')
 
