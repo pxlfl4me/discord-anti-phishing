@@ -15,6 +15,10 @@ npm install discord.js@latest
 
 ```js
 const Discord = require('discord.js')
+const Discord = require('discord.js')
+const client = new Discord.Client({
+	intents: 32767,
+});
 const { antiPhishing } = require('discord-anti-phishing')
 
 client.login('TOKEN')
@@ -23,18 +27,39 @@ client.on('ready', () => {
     console.log('Ready')
 })
 
-client.on('messageCreate', message => {
-    let embed = new Discord.MessageEmbed()
-        .setColor('RED')    //Embed Color
-        .setTitle('Link forbidden')     //Embed title
-        .setDescription('user provide a forbidden link')    //embed Description
+client.on('messageCreate', async message => {
 
-    /*
-    automatically adds:
+    antiPhishing(message).then(info => {
+        //message will be automatically deleted
+        if(info){
+            //Embed example
+            let embed = new Discord.MessageEmbed() 
+            .setColor('RED')    
+            .setTitle('Link forbidden')     
+            .setDescription('user provide a forbidden link') 
+            .addField('User:', '`' + info.userTag + ' | ' + info.userID + '`')
+            .addField('Link:', '`' + info.phishingLink + '`')
+            .setThumbnail(info.userImg)
 
-    field with user.tag and user.id, link forbidden
-    */
-
-    antiPhishing(message, embed)
+            message.channel.send({embeds: [embed]})
+            //all you custom code
+        }
+    })
 })
+```
+
+
+## Docs:
+
+
+```sh-session
+    .userUsername, Show the user username
+    |
+    .memberNickname, Show the member nickname
+    |
+    .userID, show the user id
+    |
+    .userImg, show the user profile image
+    |
+    .phishingLink, show phishing link in message
 ```
